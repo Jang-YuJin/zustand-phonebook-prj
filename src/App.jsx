@@ -6,6 +6,7 @@ import Search from './components/Search'
 import ContactList from './components/ContactList'
 import phoneBookStore from './stores/phoneBookStore'
 import ContactAdd from './components/ContactAdd'
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   const {setMode, modalOpen, setModalOpen} = phoneBookStore();
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+      <Analytics />
       <div class="phone" role="img" aria-label="스마트폰 모형">
         <div class="screen">
           <div class="notch" aria-hidden="true">
